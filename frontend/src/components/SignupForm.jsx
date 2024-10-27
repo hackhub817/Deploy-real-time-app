@@ -12,7 +12,7 @@ const SignupForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("e", email, role);
+    console.log("e", window.location.origin);
 
     try {
       const response = await axios.post(

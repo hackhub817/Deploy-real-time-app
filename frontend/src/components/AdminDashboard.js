@@ -11,7 +11,7 @@ const PlayerDashboard = () => {
 
   useEffect(() => {
     if (user && user.id) {
-      const newSocket = io("http://localhost:5000");
+      const newSocket = io(window.location.origin);
       setSocket(newSocket);
 
       newSocket.on("connect", () => {
