@@ -46,9 +46,9 @@ exports.loginUser = async (req, res) => {
       }
     );
     res.cookie("jwt", token, {
-      httpOnly: false,
-      secure: false,
-      sameSite: "lax",
+      httpOnly: true,
+      secure: true,
+      sameSite: "None",
       path: "/",
     });
     res.json({ token, user: user });
